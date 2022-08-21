@@ -1,0 +1,221 @@
+body {
+    background-color: rgb(84, 84, 84);
+    font-family: system-ui;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: 130px 1fr 60px;
+    grid-template-areas:
+      "hd hd hd"
+      "mn mn mn"
+      "ft ft ft";
+}
+
+h1,
+h2,
+h3 {
+    color: rgb(218, 121, 153);
+}
+
+header {
+    grid-area: hd;
+    padding-left: 20px;
+}
+  
+.content {
+    grid-area: mn;
+    padding: 0 20px 30px 20px;
+}
+
+#nestedgrid {
+    width: auto;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-rows: 1fr, 1fr;
+    margin: 50px 0;
+}
+
+.photobox {
+    width: auto;
+    max-width: 400px;
+    height: 250px;
+}
+
+#one {
+    background-image: url(../Images/DSotM.jpg);
+    background-size: cover;
+}
+
+#two {
+    background-image: url(../Images/The_Wall.jpg);
+    background-size: cover;
+}
+
+#three {
+    background-image: url(../Images/Animals.jpg);
+    background-size: cover;
+}
+
+#four {
+    background-image: url(../Images/Wish_You_Were_Here.jpg);
+    background-size: cover;
+}
+
+.posttext {
+    color: beige;
+    margin-bottom: 40px;
+}
+
+.sidebar {
+    display: none;
+}
+
+#homepage {
+    background-color: rgb(138, 138, 138);
+    padding: 10px;
+}
+
+button {
+    font-weight: bold;
+    color: beige;
+    background-color: rgb(218, 121, 153);
+    padding: 15px 30px;
+    margin: 40px 0 50px 35px;
+}
+
+.subscribe {
+    font-size: larger;
+    margin-right: 20px;
+}
+
+.fa {
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px;
+    margin: 20px 0;
+}
+  
+.fa:hover {
+    opacity: 0.7;
+}
+  
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+  
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+#authorinfo {
+    display: block;
+    max-width: 1000px;
+    background-color: rgb(138, 138, 138);
+    padding: 15px;
+}
+
+#authoravatar {
+    margin-left: auto;
+    margin-right: auto;
+    width: 130px;
+    max-height: 130px;
+}
+
+#authorname {
+    font-size: larger;
+    font-weight: bold;
+    margin: 0 0 70px 20px;
+}
+
+#authorbio {
+    color: beige;
+}
+
+footer {
+    grid-area: ft;
+    color: rgb(84, 84, 84);
+    background-color: rgb(245, 243, 220);
+    padding: 15px;
+}
+
+@media (max-width: 320px) {
+    .postcard {
+        width: 100%;
+    }
+
+    button {
+        margin: 40px auto;
+    }
+
+    .subscribe {
+        margin: 50px auto;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .container {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+        grid-template-rows: 130px 1fr 60px;
+        grid-template-areas:
+          "hd hd sd"
+          "mn mn sd"
+          "ft ft ft";
+    }
+
+    .sidebar {
+        display: block;
+        grid-area: sd;
+        background-color: rgb(248, 184, 192);
+        padding-left: 20px;
+    }
+
+    button {
+        margin: 50px auto;
+    }
+
+    .responsive {
+        display: none;
+    }
+}
+
+@media (min-width: 901px) {
+    .container {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+        grid-template-rows: 130px 1fr 60px;
+        grid-template-areas:
+          "hd hd sd"
+          "mn mn sd"
+          "ft ft ft";
+    }
+
+    .sidebar {
+        display: block;
+        grid-area: sd;
+        background-color: rgb(248, 184, 192);
+        padding-left: 20px;
+    }
+
+    .responsive {
+        display: none;
+    }
+
+    #nestedgrid {
+        max-width: 1000px;
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        margin: 50px 30px;
+    }
+}
